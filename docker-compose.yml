@@ -1,0 +1,11 @@
+version: '2'
+services:
+  kiva_team_view:
+    build: .
+    links:
+      - couch
+    volumes:
+      - .:/usr/src/app
+
+  couch:
+    image: couchdb
